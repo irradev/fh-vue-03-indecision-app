@@ -34,7 +34,8 @@ describe('<ChatBubble />', () => {
     expect(wrapper.emitted('sendMessage')).toBeTruthy();
     expect(wrapper.emitted('sendMessage')?.[0]).toEqual([message]);
 
-    expect(wrapper.vm.message).toBe('');
+    expect((wrapper.find('input').element as HTMLInputElement).value).toBe('');
+
   });
 
   test('should emit sendMessage event when keypress.enter is triggered', async () => {
@@ -50,7 +51,7 @@ describe('<ChatBubble />', () => {
     expect(wrapper.emitted('sendMessage')).toBeTruthy();
     expect(wrapper.emitted('sendMessage')?.[0]).toEqual([message]);
 
-    expect(wrapper.vm.message).toBe('');
+    expect((wrapper.find('input').element as HTMLInputElement).value).toBe('');
   });
 
   test('should not emit sendMessage event when message is empty', async () => {
@@ -61,5 +62,7 @@ describe('<ChatBubble />', () => {
     await buttonElement.trigger('click');
 
     expect(wrapper.emitted('sendMessage')).toBeFalsy();
+
+    expect((wrapper.find('input').element as HTMLInputElement).value).toBe('');
   });
 });
