@@ -1,3 +1,4 @@
+import { describe, expect, test, vi } from 'vitest';
 import ChatMessages from '@/components/chat/ChatMessages.vue';
 import type { ChatMessage } from '@/interfaces/chat-message.interface';
 import { mount } from '@vue/test-utils';

@@ -1,6 +1,7 @@
 // import ChatMessages from '@/components/chat/ChatMessages.vue';
 // import MessageBox from '@/components/chat/MessageBox.vue';
 import IndecisionView from '@/views/IndecisionView.vue';
+import { describe, expect, test } from 'vitest';
 import { mount } from '@vue/test-utils';
 
 // const mockChatMessages = {

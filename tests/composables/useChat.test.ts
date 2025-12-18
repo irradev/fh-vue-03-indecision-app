@@ -1,4 +1,5 @@
 import { useChat } from '@/composables/useChat';
+import { describe, expect, test, vi } from 'vitest';
 
 describe('useChat', () => {
   test('add message correctly when onMessage is called', async () => {
@@ -55,7 +56,7 @@ describe('useChat', () => {
   test('mock response - fetch api', async () => {
     const mockResponse = { answer: 'yes', image: 'example.gif' };
 
-    window.fetch = vi.fn(async () => ({
+    (window as any).fetch = vi.fn(async () => ({
       json: async () => mockResponse,
     }));
 

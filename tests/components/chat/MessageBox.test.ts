@@ -1,3 +1,4 @@
+import { describe, expect, test, beforeEach } from 'vitest';
 import MessageBox from '@/components/chat/MessageBox.vue';
 import { mount } from '@vue/test-utils';
 

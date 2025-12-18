@@ -1,3 +1,4 @@
+import { describe, expect, test } from 'vitest';
 import ChatBubble from '@/components/chat/ChatBubble.vue';
 import { mount } from '@vue/test-utils';
 
